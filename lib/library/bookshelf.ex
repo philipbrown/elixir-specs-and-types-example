@@ -9,7 +9,7 @@ defmodule Library.Bookshelf do
     {:ok, []}
   end
 
-  @spec add(String.t) :: :ok
+  @spec add(Library.Book.t) :: :ok
   def add(book) do
     GenServer.call(__MODULE__, {:add, book})
   end
@@ -19,7 +19,7 @@ defmodule Library.Bookshelf do
     GenServer.call(__MODULE__, {:count})
   end
 
-  @spec all :: list(String.t)
+  @spec all :: list(Library.Book.t)
   def all do
     GenServer.call(__MODULE__, {:all})
   end

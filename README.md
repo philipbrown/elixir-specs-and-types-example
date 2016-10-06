@@ -1,24 +1,16 @@
 # Library
 
-**TODO: Add description**
+**Specs and Types example repository**
 
-## Installation
+```elixir
+alias Library.{Bookshelf, Book}
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+# Add a book
+Bookshelf.add(%Book{title: "Patterns of Enterprise Application Architecture"})
 
-  1. Add `library` to your list of dependencies in `mix.exs`:
+# Count the books
+Bookshelf.count
 
-    ```elixir
-    def deps do
-      [{:library, "~> 0.1.0"}]
-    end
-    ```
-
-  2. Ensure `library` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:library]]
-    end
-    ```
-
+# Return all of the books
+Bookshelf.all
+```
